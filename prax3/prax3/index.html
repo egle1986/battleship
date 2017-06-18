@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="et">
+<head>
+  <meta charset="utf-8"> 
+  <meta name=viewport content="width=device-width, initial-scale=1"> <!--telefonis mängimise jaoks-->
+
+  <title>Laevade Pommitamine</title>
+
+  <link href="styles/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <h1>Laevade Pommitamine</h1>
+
+
+  <!-- Algusmenüü -->
+  <div id="header">
+
+    <div class="input"> <!-- grupeerib mobiili vaates kasutajasisestusväljad -->
+		  <label for="board-size">Väljaku suurus</label>
+		  <select id="board-size">
+		    <option value="0">0x0</option> <!-- väljaku suurused -->
+		  </select>
+    </div>
+      <br>
+    <div class="input">  
+		  <label for="boat-count">Laevade arv</label>
+		  <select id="boat-count">
+		    <option value="0">0</option> 
+		  </select>
+    </div>
+    <div class="input">  
+		  <label for="player-name">Mängija nimi</label>
+		  <input id="player-name" type="text" value="Mina">
+    </div>
+
+  </div>
+
+  <!-- Mänguväljak-->
+  <div id="game-container" class="">
+
+    <!-- Mängu oleku teated -->
+		<div id="game-status" class=""></div>
+
+    <!-- Mänguväljakud -->
+    <div id="game-fields">
+		<div><table id="player1"></table></div>
+        <div><table id="player2"></table></div>
+    </div>
+
+  </div> 
+
+
+  <button id="start-game">Alusta uut mängu</button>
+
+  <a href="../cgi-bin/prax3/showHistory.py">Kõik mängud</a>
+  <table class="table" id="game-history"></table>
+
+  <script src="scripts/jquery-2.1.4.min.js"></script>
+  <script src="scripts/app.js"></script>
+</body>

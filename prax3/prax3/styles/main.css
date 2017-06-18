@@ -1,0 +1,161 @@
+html{
+    width: 100%;
+    height: 100%;
+
+    /* taustapilt */
+    background-image: url("../images/background.jpg");
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* tervet lehte hõlmav kujundus */
+body {
+    max-width:750px;  /* lehe max suurus */
+    /* Lehe sisu keskel */
+    margin-left:auto;
+    margin-right:auto;
+
+    /* ruum lehe servades */
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    /*lehe kirjastiil, värv ja joondamine */
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #333; 
+    text-align: center;
+
+    /* valge natuke läbipaistev kast mängu osa jaoks */
+    background: rgba(255, 255, 255, 0.85);
+}
+
+
+h1 {
+    padding-top: 10px;
+    font-size: 36px;  
+    font-weight: 500; 
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+
+
+/* Sisendgrupi stiilid */
+.input {
+    display: inline-block; /* muudab terve sisend div'i üheks blokiks, mis väikese ekraani peal läheb uuele reale */
+    padding-top: 5px;
+}
+
+
+select {
+    padding: 5px;
+    font-size: 24px;  
+    font-weight: 500;
+}
+
+
+/* Mängu alustus nupu style */
+#start-game {
+    display: block;  /* Nupp on alati uuel real */
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    padding: 10px 16px;  /* nupu sisemine kõrgus */
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid transparent;  /* nupu serv */
+    color: #FFF;  /* teksti värk*/
+    background-color: #F1B4B7;
+    border-color: #F9CCB8;
+    width: 100%;  /* nupu max laius */
+    max-width: 400px;  /* max nupu suurus on 400px */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* hiir nupu peal */
+#start-game:hover,#start-game:focus {
+    color: #FFF;
+    background-color: #94737F;
+    border-color: #8A717B;
+}
+
+
+/* player namele natuke paddingut */
+#game-status {
+    padding-top: 10px;
+    min-height: 2.5em;
+}
+
+
+/* üldine tabelite kujundus */
+table {
+    border: 1px dashed #33CC99;
+
+    /* Tabeli servad tõmbab kokku */
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+
+/* üldised tabeli elementide kujundused */
+td,th {
+    padding-bottom: 8px;
+    padding-top: 8px; 
+    border: 1px dashed #33CC99;
+}
+
+
+/* muudab tabeleid mis on game-fields id'ga divi sees */
+#game-fields>div>table {
+    display:inline-block;
+    cursor: pointer;
+}
+
+
+/* muudab td elemente mis on kõigi nende teiste elementide sees */
+#game-fields>div>table>tbody>tr>td {
+    /* muudab kõik kastid täpselt 35x35 suuruseks */
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+
+    /* tekst kesekele */
+    text-align: center;
+    vertical-align: middle;
+
+    /* eemalda üleliigne ruum */
+    padding: 0px;
+}
+
+
+#game-history {
+    /* ekraani suurune tabel */
+    width: 100%;
+    max-width: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+/* mängu väljakud peaksid võimaluse korral alati olema kõrvuti kui ruumi on */
+#game-fields>div {
+    display: inline-block;
+    margin: 0px;
+}
+
+
+/* laeva pilt */
+img {
+    height: 30px;
+    width:  30px;
+    margin-bottom: -4px;
+}
